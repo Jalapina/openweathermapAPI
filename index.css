@@ -1,0 +1,155 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body,html{
+    height: 100%;
+    width: 100%;
+}
+
+.header{
+    background-color: #03a9f4d1;
+    min-height: 100px;
+    height: 15%;
+    background-image: linear-gradient(#03a9f4d1, #fff)
+}
+
+@media screen and (min-width: 750px){
+    .clouds{
+        background-color: #fff;
+        height: 77px;
+        width: 115px;
+        position: absolute;
+        top: 2%;
+        right: 10%;
+        border-radius: 54px;
+        animation-name: moving-clouds;
+        animation-duration: 10s;
+        animation-iteration-count: infinite;
+        animation-play-state: running;
+        animation-timing-function: ease-in-out;
+        -webkit-animation-name: moving-clouds;
+        -webkit-animation-duration: 10s;
+        -webkit-animation-iteration-count: infinite;
+        -webkit-animation-play-state: running;
+        -webkit-animation-timing-function: ease-in-out;
+    }
+    .clouds::before{
+        box-shadow: 2px 5px 45px black;
+        content: "";
+        height: 60px;
+        width: 86px;
+        background-color: #fff;
+        display: block;
+        position: relative;
+        top: 17px;
+        left: 83px;
+        border-radius: 30px;
+    }
+
+    .clouds::after{
+        box-shadow: 0px -4px 3px -7px black;
+        content: "";
+        height: 73px;
+        width: 80px;
+        background-color: #fff;
+        display: block;
+        position: relative;
+        bottom: 70px;
+        left: 70px;
+        border-radius: 30px;
+    }
+}
+.logo{
+    font-size: 40px;
+    padding: 20px;
+    font-family: 'Kanit', sans-serif;
+    color: #fff;
+    cursor: pointer;
+}
+
+.container{
+    height: 85%;
+    text-align: center;
+    background-image: linear-gradient(#fff, #4CAF50);
+}
+
+.weather{
+    display: inline-block;
+    margin: 30%;
+    font-size: 40px;
+    color: #fff;
+    font-family: 'Kanit', sans-serif;
+    text-transform: uppercase;
+}
+.statement{
+    color: #fff;
+    font-size: 61px;
+    position: absolute;
+    transform: rotate(-90deg);
+    margin-top: 125px;
+    margin: 100px 0px 0px -25px;
+    font-family: 'Kanit', sans-seri
+}
+.city{
+    font-size: 35px;    
+    font-family: 'Kanit', sans-serif;
+    color: #fff;
+    margin: -80px 0px 0px 70px;
+}
+.response{
+    height: 300px;
+    width: 300px;
+    background-color: #607d8b8a;
+    margin-top: 70px;
+    display: inline-block
+}
+#help{
+    margin: 0px;
+    font-size: 25px;
+    color: #fff;
+    font-family: 'Kanit', sans-serif
+}
+
+.clear-skies{
+    display: none !important;
+}
+
+.rain{
+    box-shadow: -18px 92px 228px 97px #0b57a7;
+}
+.rain-header{
+    background-image: linear-gradient(#9E9E9E,#fff);
+}
+.rain-container{
+    background-image: linear-gradient(#fff 65%, #4CAF50);
+}
+
+.snow{
+    background-image: linear-gradient(#fff, #607D8B);     
+}
+.snow-cloud{
+    box-shadow: -18px 92px 228px 97px #96aec7;
+}
+.snow-header{
+    background-image: linear-gradient(#9E9E9E,#fff);
+}
+
+@keyframes moving-clouds{
+    0%{
+        right: 10%;
+    }
+    25%{
+        right: 15%;
+    }
+    50%{
+        right: 16%;
+    }  
+    75%{
+        right: 20%;
+    }
+    100%{
+        right: 10%;
+    }
+}
